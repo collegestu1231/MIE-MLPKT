@@ -1,5 +1,7 @@
 # MIE-MLPKT
+## MIE Framework
 ![MIE](MIE.png)
+## MLPKT Framework
 ![MLPKT](MLPKT.png)
 
 This repository is built for the paper MIE+MLPKT: Leveraging LLM and Multiscale Knowledge States to Improve Knowledge Tracing in Programming Tasks。
