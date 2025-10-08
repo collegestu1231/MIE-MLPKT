@@ -31,6 +31,12 @@ $$ R^i_t = \text{LLM}(P^r(\text{Data}(m_t^i \mid \hat{m}_t^i \mid PD_t^i \mid \h
 where $R^i_t \in \mathcal R$. Thus, we obtain the collection of code analyses $\mathcal R$ as mentioned earlier.
 
 ## MLPKT Framework
+We divide the learning process into three phases: learning, forgetting/enhancement, and application, while tracing abilities across three levels: syntax, logic, and problem-specific.
+
+- Learning phase: The student's submitted problem, related concepts, and scores are input into a multi-level ability computation module to calculate changes in students' abilities at logic, syntax, and problem-specific levels. For problem-specific ability changes, we design an exponential enhancement function to model the gradual deepening of understanding during repeated attempts. Based on LLM-extracted syntax and logic errors or correctness, we determine the direction of changes in logic and syntax abilities.
+- Forgetting/enhancement phase: This phase dynamically selects enhancement or forgetting based on interaction intervals. For interactions with intervals below a threshold, a short-interval enhancement module simulates the learning process; for intervals exceeding the threshold, a long-interval forgetting module simulates the forgetting process.
+- Application phase: Syntax, logic, and problem-specific abilities related to the current problem are input into a multi-level student ability application module to predict the student's score. To enhance model interpretability, we design a multi-level ability integration module that makes it applicable to the 2-parameter item response theory (IRT).
+
 <div align="center">
   <img src="MLPKT.png" alt="MLPKT">
 </div>
