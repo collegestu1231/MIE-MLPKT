@@ -1,6 +1,6 @@
 # MIE-MLPKT
 This repository is built for the paper MIE+MLPKT: Leveraging LLM and Multiscale Knowledge States to Improve Knowledge Tracing in Programming Tasks.
-> **Author: mingxing Shao**, **tiancheng Zhang**
+
 ## MIE Framework
 As illustrated in Figure 2, we design an LLM-Driven Interaction Enrichment Framework to provide reasonable score labels and code analysis results for the three-level knowledge tracing framework. 
 
