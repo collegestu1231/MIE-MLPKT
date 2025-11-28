@@ -5,7 +5,7 @@ This repository is built for the paper MIE+MLPKT: Leveraging LLM and Multiscale 
 To run the complete code, please first download the "data" profile available at: https://drive.google.com/drive/folders/1jdoNIi4GNeYeps6R3tCDsz3GAaEP7KK6?usp=drive_link. It should be noted that, as the paper has not yet been officially accepted, we have currently only open-sourced the labeled dataset of the deepseek-V3.1 version for Code-S, along with the first 5,000 ratings and reasoning extraction data from each dataset. Once the paper is successfully published, we will immediately open-source the complete data.
 
 To further facilitate the reproduction of our work and due to file size limitations (≤25MB), we have provided the first 5,000 interactions of the deepseek V30 version for the Code-S dataset (please note that both the scores and reasoning analysis are results from Deepseek-V30). After downloading this project, simply follow these steps to run the code properly:
-1. Prepare the requirements inllustrated in the "requirements.txt"
+1. Prepare the requirements illustrated in the "requirements.txt"
 2. Create a directory named "MLKT4" under the "data/Code-S" path.
 3. Run "data_save_Code_S&F.py" - this will generate the corresponding training, validation, and test files in the newly created directory.
 4. Execute "train_mlkt4" to start running the program!
