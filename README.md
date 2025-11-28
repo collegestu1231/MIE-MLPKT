@@ -4,7 +4,11 @@ This repository is built for the paper MIE+MLPKT: Leveraging LLM and Multiscale 
 ## Reproduce
 To run the complete code, please first download the "data" profile available at: https://drive.google.com/drive/folders/1jdoNIi4GNeYeps6R3tCDsz3GAaEP7KK6?usp=drive_link. It is worth noting that, as the paper has not yet been officially accepted, we have currently only open-sourced the labeled dataset of the deepseek-V3.1 version for Code-S, along with the first 5,000 ratings and reasoning extraction data from each dataset. Once the paper is successfully published, we will immediately open-source the complete data.
 
-To further facilitate the reproduction of our work, due to file size limitations (≤25MB), we have provided the first 5,000 interactions of the deepseek V30 version for the Code-S dataset. After downloading this project, simply remove the "_5000" suffix from the file names to run the code properly!
+To further facilitate the reproduction of our work and due to file size limitations (≤25MB), we have provided the first 5,000 interactions of the deepseek V30 version for the Code-S dataset. After downloading this project, simply remove the "_5000" suffix from the file names and follow these steps to run the code properly:
+
+1. Create a directory named `MLKT4` under the `data/Code-S` path.  
+2. Run `data_save_Code_S&F.py` – this will generate the corresponding training, validation, and test files in the newly created directory.  
+3. Execute `train_mlkt4` to start running the program!
 
 ## Overview
 This paper highlights three unique characteristics of programming knowledge tracing tasks compared to traditional subject-based knowledge tracing, which often lead to suboptimal performance of existing KT models on programming benchmarks. To address these challenges, we propose the MIE+MLPKT framework. The MIE component uses carefully designed prompts to extract reasonable scoring labels and multi-level error cause analyses from large language models (LLMs), mitigating label continuity and irrationality issues while reducing high uncertainty. To handle the multi-layered nature of student proficiency in programming tasks, we introduce MLPKT, a three-tiered knowledge tracing framework that integrates error analysis vectors from MIE. Extensive experiments across three datasets and 18 baselines validate the effectiveness of our framework. In future work, we aim to evaluate MIE+MLPKT in real-world educational settings.
