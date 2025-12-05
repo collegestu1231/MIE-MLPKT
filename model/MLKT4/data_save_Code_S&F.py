@@ -11,7 +11,7 @@ main_table = pd.read_csv('../../data/Code-S/MainTable_5000.csv')
 skill_table = pd.read_csv('../../data/Code-S/problem_skills.csv')
 code_table = pd.read_csv('../../data/Code-S/CodeStates_5000.csv')
 score_table = pd.read_csv('../../data/Code-S/V30/CodeScore_5000.csv')
-reason_table = pd.read_csv('../../data/Code-S/V30/CodeReason.csv')
+reason_table = pd.read_csv('../../data/Code-S/V30/CodeReason_5000.csv')
 # Merge tables
 # print(len(code_table))
 code_table = code_table.dropna(subset=['Code'])
@@ -157,4 +157,5 @@ for item in tqdm(valid_id):  # 使用验证数据集
 df_valid = pd.DataFrame(q_a_valid, columns=['SubjectID','ProblemID','Skills','Reason','Label','ServerTimestamp'])
 df_valid.to_csv('../../data/Code-S/MLKT4/q_a_valid_detailed.csv', index=False)
 print('complete')
+
 
