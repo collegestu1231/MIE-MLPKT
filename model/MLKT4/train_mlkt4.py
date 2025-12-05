@@ -14,7 +14,7 @@ import torch.optim as optim
 import time
 device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 from gen_data import KTDataset
-from smx import StudentKnowledgeModel
+from mlkt4 import StudentKnowledgeModel
 # from smx_wo_logic import StudentKnowledgeModel
 from eval_mlkt import lossFunc,performance
 from torch.utils.data import DataLoader
@@ -194,3 +194,4 @@ print('total running time:{} min'.format((end - now) / 60))
 print('total running time:{} min'.format((end - now) / 60),file=log)
 log.close()
 print('此为DK3.0')
+
